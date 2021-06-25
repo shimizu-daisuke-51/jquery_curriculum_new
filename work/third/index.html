@@ -24,14 +24,12 @@
     </div>
     <script src="../../common/js/jquery.js"></script>
     <script>
-      $(function () {
-        $('.nav li').click(function () { 
-          var index = $('.nav li').index(this); 
-          $('.nav li').removeClass(',nav li'); 
-          $(this).addClass('.nav li'); 
-          $('.contents li').hide().eq(index).show(); 
-        });
-      });
+      // 今回やるのはタブメニューです。
+      // navの小要素であるliをクリックして、contents内の小要素であるli要素を表示させる。
+      // .index() 要素のindexを取得します。
+      // .eq() 引数に応じたindexの要素を指定します。
+      // .addClass() クラスを追加します。
+      // .removeClass() クラスを削除します。
     </script>
   </body>
 </html>
