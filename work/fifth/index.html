@@ -91,7 +91,7 @@
             $('ul.list li').show()
           } 
           else {
-            $('ul.list li').each(function(sort) {
+            $('ul.list li').each(function(sort, index) {
               if(selectlist===$(this).data("category-type")){
                 $(this).show();
               } 
