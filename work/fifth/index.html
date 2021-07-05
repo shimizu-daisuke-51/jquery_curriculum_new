@@ -86,19 +86,19 @@
     <script>
       $(function() {
         $(".select").change(function(){
-          var v=$(this).val();
-           console.log(v)
-          if(v=="all"){
-            $('ul.list li').each(function(){ $(this).show() });
+          var selectlist=$(this).val();
+          if(selectlist==="all"){
+            $('ul.list li').show()
           } 
           else {
-            $('ul.list li').each(function(){
-              if(v==$(this).data("category-type")){
+            $('ul.list li').each(function(sort) {
+              if(selectlist===$(this).data("category-type")){
                 $(this).show();
-              } else {
+              } 
+              else {
                 $(this).hide();
               }
-            });
+            })
           }
         });
       });
