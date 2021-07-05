@@ -87,11 +87,13 @@
       $(function() {
         $(".select").change(function(){
           var v=$(this).val();
+           console.log(v)
           if(v=="all"){
             $('ul.list li').each(function(){ $(this).show() });
-          } else {
+          } 
+          else {
             $('ul.list li').each(function(){
-              if($(this).data("category-type")==v){
+              if(v==$(this).data("category-type")){
                 $(this).show();
               } else {
                 $(this).hide();
