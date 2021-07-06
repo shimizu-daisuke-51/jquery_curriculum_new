@@ -91,12 +91,12 @@
             $('ul.list li').show()
           } 
           else {
-            $('ul.list li').each(function(sort, index) {
+            $('ul.list li').each(function(index, value) {
               if(selectlist===$(this).data("category-type")){
-                $(this).show();
+                $(value).show();
               } 
               else {
-                $(this).hide();
+                $(value).hide();
               }
             })
           }
